@@ -42,17 +42,21 @@ main {
 }
 
 .result {
-    background-color: var(--Light-royal-blue-background);
+    background:var(--Light-royal-blue-background);
     text-align: center;
-    max-width: 50%;
+    max-width: 320px;
     border-radius: 20px;
+    padding: 3em ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 
 }
 
 .result p {
     color: var(--Light-lavender);
     font-weight: 400;
-    padding: 1.2em;
     font-size: 1.2rem;
 }
 
@@ -66,24 +70,18 @@ h2 {
     color: var(--White);
 }
 
-.compliment {
-    width: 80%;
-    margin: auto;
-    padding: 1em;
-    font-weight: 400;
-}
 
 .result__score {
     background: radial-gradient(circle at center, rgb(14, 58, 190), transparent);
-    border-radius: 50%;
+    border-radius:calc(infinity * 1px);
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
-    width: 12.5em;
-    height: 12.5em;
+    width: 10.5em;
+    height: 10.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: auto;
+    margin:0 auto;
     position: relative;
 }
 
@@ -97,13 +95,17 @@ h2 {
 }
 
 .summary-container {
-    width: 50%;
+    width: 100%;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
-.summary-container p {
+.title {
     font-weight: 800;
-    padding: 1em;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: var(--Darkgray-blue);
 }
 
@@ -114,64 +116,44 @@ h2 {
 }
 
 .summary p {
-    color: var(--Darkgray-blue);
     font-weight: 800;
-
-}
-
-span {
-    color: var(--Light-lavender);
+    padding: 1em;
 }
 
 .left-text {
     display: flex;
     align-items: center;
-    gap: 0.5em;
+    gap: 0.8em;
 }
 
 .reaction {
     background-color: var(--Light-red);
     border-radius: 10px;
-    width: 80%;
-    margin: 0.8em auto;
-}
-
-.reaction h3 {
+    margin: 1em auto;
     color: hsl(0, 100%, 67%);
 }
 
 .memory {
     background-color: var(--Orangey-yellow);
     border-radius: 10px;
-    width: 80%;
-    margin: 0.8em auto;
-}
-
-.memory h3 {
+    margin: 1em auto;
     color: hsl(39, 100%, 56%);
 }
 
 .verbal {
     background-color: var(--Green-teal);
     border-radius: 10px;
-    width: 80%;
-    margin: 0.8em auto;
-}
-
-.verbal h3 {
+    margin: 1em auto;
     color: hsl(166, 100%, 37%);
 }
 
 .visual {
     background-color: var(--Cobalt-blue);
     border-radius: 10px;
-    width: 80%;
-    margin: 0.8em auto;
-}
-
-.visual h3 {
+    margin: 1em auto;
     color: hsl(234, 85%, 45%);
 }
+
 
 button {
     display: flex;
@@ -205,15 +187,18 @@ button:focus {
 @media(max-width: 45em) {
     main {
         flex-direction: column;
-        align-items: center;
+        width: 100%;
+        border-radius: 0;
     }
 
     .result{
         max-width: 100%;
         border-radius: 0 0 20px 20px ;
+        gap: 1em;
+        box-shadow: 0 10px 10px 0 var(--Light-lavender);
     }
         .summary-container{
-            width: 100%;
+        width: 100%;
         }
 
 }
